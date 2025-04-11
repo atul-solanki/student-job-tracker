@@ -5,7 +5,7 @@ import JobList from './components/JobList';
 import Filter from './components/Filter';
 import './App.css';
 
-const API_URL = 'http://localhost:5000/api/jobs';
+const API_URL = 'https://student-job-tracker-2em4.onrender.com/api/jobs';
 
 function App() {
   const [jobs, setJobs] = useState([]);
