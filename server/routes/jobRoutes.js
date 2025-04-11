@@ -2,7 +2,7 @@
 // such as creating, retrieving, updating, and deleting job entries. It uses Express.js to define the routes and Mongoose to interact with the MongoDB database.
 const express = require('express');
 const router = express.Router();
-const Job = require('../models/job'); // Import the Job model
+const Job = require('../models/Job'); // Import the Job model
 
 // CREATE a job
 router.post('/', async (req, res) => {
