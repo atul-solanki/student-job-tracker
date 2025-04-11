@@ -1,0 +1,19 @@
+/* ====================================
+  Job List
+==================================== */
+.job-list {
+    display: grid;
+    gap: 15px;
+  }
+  
+  /* Empty job message */
+  .no-jobs-msg {
+    text-align: center;
+    color: #777;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }

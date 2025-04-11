@@ -1,0 +1,46 @@
+/* ====================================
+  Job Form
+==================================== */
+.job-form {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    gap: 10px; /* Space between form elements */
+    margin-bottom: 20px; /* Space below the form */ 
+    background-color: #ffffff;  /* White background for the form */
+    border: 1px solid #ccc; /* Light gray border for the form */
+    padding: 15px; /* Padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    width: 100%; /* Full width for the form */
+    max-width: 800px; /* Maximum width for the form */
+    margin: 0 auto; /* Center the form */
+  }
+  
+  /* ============================================================
+     Job Form Elements Styling
+  ============================================================ */
+  
+  /* Styles for input fields, select dropdowns, and buttons inside the job form.*/
+  .job-form input,
+  .job-form select,
+  .job-form button {
+    flex: 1 1 150px;  /* - `flex: 1 1 150px` allows flexible resizing with a minimum base width of 150px. */
+    padding: 8px; /* - `padding: 8px` ensures comfortable spacing inside each field. */
+    border: 1px solid #ccc; /* - `border: 1px solid #ccc` gives a subtle gray border for form fields. */
+    border-radius: 5px; /* - `border-radius: 5px` applies rounded corners for a softer appearance. */
+    font-size: 14px; /* - `font-size: 14px` ensures readability without overwhelming the layout. */
+    max-height: fit-content; /* - `max-height: fit-content` allows each element to fit its content height naturally.*/
+  }
+  
+  
+  .job-form button {
+    background-color: #007bff; /* - `background-color: #007bff` gives a vibrant blue color to the button. */
+    color: white; /* - `color: white` ensures the text on the button is easily readable. */
+    cursor: pointer; /* - `cursor: pointer` changes the cursor to a pointer when hovering over the button, indicating it's clickable. */
+    transition: background-color 0.3s ease; /* - `transition: background-color 0.3s ease` provides a smooth color change effect when hovering. */
+  }
+  .job-form button:hover {
+    background-color: #0056b3; /* - `background-color: #0056b3` changes the button color on hover for a visual cue. */
+    color: #ffffff; /* - `color: #ffffff` keeps the text white for contrast against the new background. */
+    border: none; /* - `border: none` removes the default border on hover for a cleaner look. */
+  }

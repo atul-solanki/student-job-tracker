@@ -1,0 +1,141 @@
+/* ====================================
+  Base Styles & Resets
+==================================== */
+/* ============================================
+   Box Sizing Reset for Consistent Layouts
+============================================ */
+* {
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+  margin: 0;              /* Remove default margin from all elements */
+  padding: 0;             /* Remove default padding from all elements */
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;    /* Inherit box-sizing to maintain consistency on pseudo-elements */
+}
+
+/* ============================================
+   HTML Base Settings
+============================================ */
+html {
+  font-size: 100%;               /* Default font size (16px) for accessibility and scalability */
+  -webkit-text-size-adjust: 100%; /* Prevent font size adjustment on Safari */
+  -moz-text-size-adjust: 100%;    /* Prevent font size adjustment on Firefox */
+  -ms-text-size-adjust: 100%;     /* Prevent font size adjustment on IE */
+}
+
+html, body {
+  width: 100%;                  /* Ensure html and body take full width */
+  overflow-x: hidden;           /* Prevent horizontal overflow */
+}
+/* ============================================
+   Typography and Color Scheme
+============================================ */
+
+/* 
+  Set default font properties and color scheme for the application.
+  - Uses system fonts for performance and consistency across devices.
+  - Line height of 1.5 ensures good readability.
+  - Normal font weight for standard body text.
+  - Supports both dark and light color schemes with `color-scheme`.
+  - Default text color is semi-transparent white for subtle contrast on dark backgrounds.
+*/
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  /* Font rendering enhancements for smoother text across platforms */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+   
+/* Body Styling: Center content vertically and horizontally */
+body {
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  min-width: 320px; /* Minimum width for mobile responsiveness */
+  min-height: 100vh; /* Minimum height for full viewport */
+}
+
+/* Anchor tag styling */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* ====================================
+  App Container & Header
+==================================== */
+.app-container {
+  max-width: 1024px; /* Maximum width for the app container */
+  width: 100%; /* Full width for responsiveness */
+  margin: 0 auto; /* Center the container */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  gap: 20px; /* Space between children */
+  padding: 20px; /* Padding for spacing */
+  background-color: #e5e5e5; /* Light background for the app container */
+  color:  #213547; /* Dark text color for contrast */
+  min-height: 100vh; /* Minimum height for full viewport */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.1;
+}
+
+/* ====================================
+  Responsive Styles
+==================================== */
+@media (max-width: 600px) {
+  .job-form {
+    flex-direction: column;
+  }
+
+  .job-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+}
+
+/* ====================================
+  Light Theme Overrides
+==================================== */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
